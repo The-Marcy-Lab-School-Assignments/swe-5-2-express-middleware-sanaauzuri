@@ -66,8 +66,8 @@ This assignment has 17 requirements:
 
 **Server Setup (3 pts)**
 
-- [ ] `express` is imported with `require('express')` and an app is created with `express()`
-- [ ] The app listens on port `8080`
+- [x] `express` is imported with `require('express')` and an app is created with `express()`
+- [x] The app listens on port `8080`
 - [ ] The server runs without errors
 
 **Middleware (5 pts)**
