@@ -12,7 +12,8 @@ Express is described as a framework that "wraps" `node:http`. What does that mea
 
 **Your answer here**:
 
----
+Express is described as a framework that "wraps" `node:http` because Express encases the repetitive code/work of `node:http` into one or two lines of code. With node:http, handling a `GET /api/users` request means writing if/else chains on `req.method` and `req.url`, manually calling `res.writeHead()` to set headers on each response, `JSON.stringify()` to convert data on each response body, and `res.end()` to send the response on every code path. With Express, you could just write `app.get('/api/users', serveUsers)` and use `res.send(users)`. That one line automatically sets the status to 200, sets the `Content-Type` header to `application/json`, and serializes the object to JSON.
+
 
 ## Question 2: Endpoints, Controllers, and Middleware
 
@@ -20,7 +21,8 @@ What are **controllers** and **middleware** in Express? What are each responsibl
 
 **Your answer here**:
 
----
+A **controller** is a `callback function` tied to a specific request that reads the `req` object and sends back a response using `res`. **Middleware** is similar to a controller, but instead of sending a response, it logs the request and then calls `next()` to pass the request along to a controller to send a response. Middleware runs first for every incoming request, then the right controller takes over and sends the final response.
+
 
 ## Question 3: Query Strings and Route Parameters
 
@@ -28,7 +30,7 @@ How are **query strings** and **route parameters** similar? How are they differe
 
 **Your answer here**:
 
----
+
 
 ## Question 4: Same-Origin Requests
 
