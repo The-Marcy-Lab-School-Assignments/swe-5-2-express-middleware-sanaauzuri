@@ -30,6 +30,7 @@ How are **query strings** and **route parameters** similar? How are they differe
 
 **Your answer here**:
 
+Both **query strings** and **route parameters** are properties of the `req` object and allow the client to filter or request certain data from the server. The difference is how they appear in the `URL`. **Query strings** come after a ? as `key=value` pairs. For example, `/api/users?contains=a` is a query string and is used to filter through user data to find users that contain the letter A. **Route parameters** are named segments directly in the `URL` path, like `/api/users/:id`, and could be used to target one specific resource **(user)** by a unique identifier **(userId)**.
 
 
 ## Question 4: Same-Origin Requests
