@@ -38,3 +38,5 @@ Both **query strings** and **route parameters** are properties of the `req` obje
 For API fetch calls from a client-side application, explain the difference between fetching from endpoints with relative paths like `/api/quotes` and fetching from endpoints with a full URL like `https://dog.ceo/api/breeds/image/random`. Why do we not send a fetch using a url like `http://localhost:8080/api/quotes`?
 
 **Your answer here**:
+
+When we fetch from a full URL like `https://dog.ceo/api/breeds/image/random`, it's a **cross-origin** request because the origin of the request, or client and the server are different. But when our client is using the same Express server as our API, both at `http://localhost:8080`, we can use a relative path like `/api/quotes` because the browser assumes it's a same origin request. We avoid writing `http://localhost:8080/api/quotes` because `localhost` exists on only our machine, and once the app is deployed that hardcoded URL would break.
